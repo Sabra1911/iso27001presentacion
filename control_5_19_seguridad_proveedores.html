@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ISO/IEC 27001 - Anexo A: Control 5.19 Seguridad con Proveedores</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;--card:#ffffff;--accent:#0b63d4;--muted:#556;--mono:#0e1724
+    }
+    [data-theme="dark"]{
+      --bg:#0e1724;--card:#1c2533;--accent:#4ea1ff;--muted:#aaa;--mono:#f0f4f9
+    }
+    body{
+      font-family:Inter, Roboto, Arial, sans-serif;background:var(--bg);color:var(--mono);margin:0;padding:32px;transition:all .3s ease
+    }
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;gap:20px;margin-bottom:18px;flex-direction:column;text-align:center}
+    header h1{margin:0;font-size:26px;color:var(--accent)}
+    header p{margin:0;color:var(--muted)}
+    .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(0,0,0,0.2);margin-bottom:16px}
+    h2{color:var(--accent);margin-top:0}
+    ul,ol{line-height:1.6}
+    .code{font-family:monospace;background:#fafafa;padding:8px;border-radius:6px;display:block}
+    .controls-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    .control-item{border-left:4px solid var(--accent);padding:10px;background:var(--card);border-radius:8px}
+    footer{font-size:13px;color:var(--muted);text-align:center;margin-top:20px}
+    .btn-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+    .btn{background:var(--accent);color:white;padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:600;cursor:pointer;border:none}
+    @media (max-width:640px){body{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Anexo A — Control 5.19: Seguridad de la información en las relaciones con proveedores</h1>
+        <p>Presentación de dominios, objetivos, controles y ejemplo aplicado.</p>
+      </div>
+      <div>
+        <p><strong>Marco Jhoan Sierra Ariza</strong></p>
+        <p>Universidad Simón Bolívar</p>
+        <p>Programa: Ingeniería de Sistemas</p>
+      </div>
+      <div class="btn-row">
+        <button class="btn" onclick="toggleTheme()">Cambiar tema</button>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>1. Identificación de dominios del Anexo A</h2>
+      <p>El Anexo A de la norma ISO/IEC 27001:2022 organiza los controles en dominios. El <strong>Control 5.19</strong> se ubica en el <strong>Dominio 5: Organización de la seguridad de la información</strong>, específicamente en el área de <em>Relaciones con proveedores</em>.</p>
+    </section>
+
+    <section class="card">
+      <h2>2. Descripción del dominio de control</h2>
+      <p>Este dominio busca garantizar que los riesgos de seguridad de la información asociados al acceso, procesamiento, comunicación o gestión de datos por parte de proveedores sean identificados y tratados adecuadamente. Aplica a contratos de servicios, outsourcing, cloud, soporte técnico y cualquier relación externa que involucre activos de información.</p>
+    </section>
+
+    <section class="card">
+      <h2>3. Objetivo del control</h2>
+      <p class="code">“Asegurar que la seguridad de la información y el cumplimiento de los requisitos estén protegidos y mantenidos en las relaciones con proveedores.”</p>
+      <p>El propósito es mantener un nivel de seguridad equivalente o superior al interno de la organización en todo el ciclo de vida de la relación con proveedores.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Controles propuestos por el objetivo</h2>
+      <div class="controls-grid">
+        <div class="control-item">
+          <strong>a)</strong>
+          <p>Definir criterios para selección y evaluación de proveedores según criticidad y sensibilidad de la información.</p>
+        </div>
+        <div class="control-item">
+          <strong>b)</strong>
+          <p>Establecer cláusulas contractuales de seguridad de la información (confidencialidad, uso de datos, responsabilidades).</p>
+        </div>
+        <div class="control-item">
+          <strong>c)</strong>
+          <p>Supervisar y auditar periódicamente el cumplimiento de los requisitos de seguridad por parte de los proveedores.</p>
+        </div>
+        <div class="control-item">
+          <strong>d)</strong>
+          <p>Gestionar incidentes de seguridad relacionados con proveedores, incluyendo tiempos de respuesta y notificación.</p>
+        </div>
+        <div class="control-item">
+          <strong>e)</strong>
+          <p>Asegurar la terminación segura de la relación: retiro de accesos, devolución o eliminación de información.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5. Ejemplo de aplicación</h2>
+      <p><strong>Caso:</strong> Una universidad contrata un servicio en la nube para almacenar expedientes académicos de estudiantes.</p>
+      <ol>
+        <li>La universidad selecciona un proveedor con certificaciones ISO 27001 y políticas de cifrado.</li>
+        <li>En el contrato se incluyen cláusulas de confidencialidad, auditorías externas y respuesta a incidentes en máximo 24 horas.</li>
+        <li>Se define un plan de monitoreo con reportes trimestrales de seguridad y pruebas de continuidad del servicio.</li>
+        <li>En caso de terminar el contrato, se establece la devolución de la información y su eliminación certificada en los sistemas del proveedor.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>6. Nota para presentación</h2>
+      <p>Este material puede ser subido a GitHub como archivo HTML. El enlace compartido servirá para la socialización individual, sin necesidad de exposición oral directa.</p>
+      <div class="btn-row">
+        <a class="btn" href="#" onclick="window.print();return false;">Imprimir / Guardar PDF</a>
+      </div>
+    </section>
+
+    <footer>Documento académico basado en ISO/IEC 27002:2022 — Anexo A (Control 5.19)</footer>
+  </div>
+
+  <script>
+    function toggleTheme(){
+      document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+    }
+  </script>
+</body>
+</html>
